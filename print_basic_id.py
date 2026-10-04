@@ -1,0 +1,5 @@
+print("******our details:******")
+print("Ron Elkayam")
+print("Kiryat gat")
+print(36)
+print("soccer")

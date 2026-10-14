@@ -80,3 +80,18 @@ print("\n")
 print("Run all keys & values in the same iteration:")
 for key, value in grades.items():
     print(f"Key: {key} -> Value: {value}")
+
+
+#Word frequency counter (using dictionary)
+text = "python is so easy and python is great"
+words = text.split()#split function splits the string into list of words
+words_counter={}
+for word in words:
+    #If the word already exists in the dictionary,increment its count by 1
+    #If it doesn't exist yet , .get(word.0) return 0 and we add 1
+    words_counter[word] = words_counter.get(word, 0) + 1
+
+print("---- Word Frequency Results -----")
+print(f"text->{text}")
+for word,counter in words_counter.items():
+    print (f"Word: {word} -> Count: {counter}")

@@ -14,6 +14,7 @@ Key concepts covered in this file:
 =============================================================================
 """
 
+
 # =============================================================================
 # 1. DEFAULT (OPTIONAL) ARGUMENTS
 # If the user doesn't provide a value for the parameter, the default value is used.
@@ -87,3 +88,46 @@ def print_user_profile(**user_data):
 
 print("--- 4. FLEXIBLE KEYWORD ARGUMENTS (**kwargs) ---")
 print_user_profile(username="alex123", email="alex@example.com", age=25)
+
+
+#===========================================================================
+#TYPE HINTS FOR VARIABLES (VARIABLE ANNOTATIONS)
+#
+#You can also add type hints when declaring standard variables outside functions.
+# Syntax: variable_name: Type = value
+# You can add type hints when return standard variable
+# Syntax : func_name()->return type
+#==============================================================================
+def simple_func(name: str = "Ron") -> None:
+    print(f"hello {name}")
+
+
+simple_func(name="Itzik")
+simple_func()
+simple_func(56)  # working good with another type
+
+
+def calculate_total_price(price: float, tax: float = 0.17, express_shipping: bool = False) -> float:
+    """
+    Calculates the total price including tax and optional express shipping
+
+    :param price: The base price of the item.
+    :param tax: The tax rate (default 0.17/17%).
+    :param express_shipping:  Whether to add express shipping (default False ).
+    :return: the final total price as a float.
+    """
+    express_shipping_price = 30.0
+    total = price * (1 + tax)
+
+    if express_shipping:
+        total += express_shipping_price
+        print(f"express shipping price: {express_shipping_price} added to total price")
+
+    return total
+
+
+final_price1: float = calculate_total_price(100)
+print(f"final price: {final_price1}")
+
+final_price2: float = calculate_total_price(price=200.0, tax=0.20, express_shipping=True)
+print(f"final price: {final_price2}")

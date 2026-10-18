@@ -1,0 +1,5 @@
+HOST=107.0.0.1
+PORT=8080
+DEBUG=True
+ENV= production
+We are hackers of hacker u

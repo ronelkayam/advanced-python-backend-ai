@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "username": "dana_dev",
+        "email": "dana@email.com",
+        "is_active": true
+    },
+    {
+        "id": 2,
+        "username": "yossi_db",
+        "email": "yossi@example.com",
+        "is_active": true
+    },
+    {
+        "id": 3,
+        "username": "ron_devops",
+        "email": "ron@example.com",
+        "is_active": true
+    }
+]

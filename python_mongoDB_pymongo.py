@@ -7,7 +7,7 @@ NoSQL DB using python and PyMongo:
 1. Client connection: Establish a connection to the local MongoDB server
 2. DB & Collection Access: Navigating to the 'DB_name' db
    and the 'Collection_name' collection
-3. Querying Data: Using filter operation (for example $gt for greater then)
+3. Querying Data: Using filter operation (for example $gt for greater than)
 to retrieve specific documents
 4. Data Parsing: Extracting field dynamically from JSON documents
    (which map directly to python dictionaries).
